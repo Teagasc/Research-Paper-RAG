@@ -1,4 +1,4 @@
-# Reflex Chat App
+# Teagasc Research Paper RAG AI app - Reflex based with Ragflow backend
 
 A user-friendly, highly customizable Python web app designed for chatting with Teagasc research papers.
 
