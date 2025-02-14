@@ -131,12 +131,12 @@ class State(rx.State):
 
     @rx.var(cache=False)
     def document_names(self) -> List[str]:
-        docs = acres_dataset.list_documents(page=1, page_size=100)
+        docs = acres_dataset.list_documents(page=1, page_size=1000)
         return [doc.name for doc in docs]
 
     @rx.var(cache=False)
     def documents(self) -> List[Dict[str, Any]]:
-        docs = acres_dataset.list_documents(page=1, page_size=100)
+        docs = acres_dataset.list_documents(page=1, page_size=1000)
         return [{"id": doc.id, "name": doc.name} for doc in docs]
 
     async def process_question(self, form_data: Dict[str, Any]):
